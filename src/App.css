@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.Main {
+  /* background-image: url("./YSS_Background.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #32f4fb;
+
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh; /* 뷰포트 최소 높이 설정 */
+  border: 3px;
+  box-sizing: border-box;
+  width: 100%; /* 뷰포트 너비에 맞게 설정 */
+  max-width: 500px; /* 최대 너비 설정 */
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.1),
+    -10px 20px 40px rgba(0, 0, 0, 0.1);
+  /* padding-bottom: 10px; 삭제 또는 값 조정 */
+}
+
+/* 새로운 클래스 추가 */
+.InputWrapper {
+  position: absolute;
+  bottom: 5%; /* Input을 화면 아래에서 5%에 위치하도록 설정합니다. */
+  left: 50%; /* 화면 가로 중앙에 위치하도록 설정합니다. */
+  transform: translateX(
+    -50%
+  ); /* 가로 중앙 정렬을 위해 왼쪽으로 50% 이동합니다. */
+  width: 30%; /* 부모 요소의 너비를 100%로 설정하여 가로 사이즈 조정이 가능하게 합니다. */
+}
+
+@media only screen and (max-width: 600px) {
+  .Main {
+    height: 100%; /* 작은 화면에선 너비를 100%로 변경합니다. */
+  }
+
+  .InputWrapper {
+    width: 70%; /* 작은 화면에선 입력란을 더 좁게 조정합니다. */
+  }
+}
